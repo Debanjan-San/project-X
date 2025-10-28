@@ -12,8 +12,7 @@ plugin(
     },
     async (client, M) => {
         const sender = findUser(M.sender.id)
-        if (!sender) return M.reply('⚠️ You are not registered.')
-
+        
         // Check if user is in a relationship
         if (!sender.relationship?.status) {
             return M.reply('💔 You are not in a relationship currently.')
