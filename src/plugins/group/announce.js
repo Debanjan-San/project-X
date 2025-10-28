@@ -10,7 +10,7 @@ plugin(
         category: 'group',
         description: {
             content: 'Open or close the group for messages.',
-            usage: 'open | close',
+            usage: '<open | close>',
             example: 'open'
         }
     },
