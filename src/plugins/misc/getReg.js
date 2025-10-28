@@ -9,10 +9,12 @@ plugin(
         isGroup: true,
         catagory: 'misc',
         description: {
-            content: 'Get a registration code to begin the registration process.'
+            usage: '<phone_number>',
+            content: 'Get a registration code to begin the registration process.',
+            example: '917003265'
         }
     },
-    async (client, M, args) => {
+    async (client, M, { args }) => {
         const senderId = M.sender?.id || M.from
         const senderName = M.sender?.name || 'User'
 
