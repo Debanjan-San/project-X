@@ -9,7 +9,7 @@ plugin(
         category: 'group',
         description: {
             content: 'Tag everyone in the group with an optional message.',
-            usage: '[message | quote message]',
+            usage: '<message | quote message>',
             example: 'Good morning everyone!'
         }
     },
