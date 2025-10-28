@@ -29,7 +29,7 @@ plugin(
             return M.reply(`❌ Invalid or expired registration code. Please use *${global.config.prefix}getreg* again.`)
         }
 
-        if (data.jid !== M.sender.id) {
+        if (data.id !== M.sender.id) {
             return M.reply(
                 `🚫 This code does not belong to you. Please generate your own using *${global.config.prefix}getreg*.`
             )
