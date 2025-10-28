@@ -10,7 +10,7 @@ plugin(
         category: 'group',
         description: {
             content: 'Demote mentioned users from admin role.',
-            usage: '[mention user | quote user]',
+            usage: '<mention user | quote user>',
             example: '@917003213983'
         }
     },
