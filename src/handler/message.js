@@ -18,14 +18,11 @@ export default async (client, M) => {
         )
         if (!M.body.startsWith(global.config.prefix)) return
         // List of commands that should skip registration check
-const noRegNeeded = ['getreg', 'regcode', 'register', 'signup']
-
-if (
-    !isRegUser(M.sender.id) &&
-    !noRegNeeded.some((cmd) => M.body.toLowerCase().includes(cmd))
-) {
-    return M.reply(`❌ You are not registered. Use *${global.config.prefix}getreg* first.`)
-}
+        const noRegNeeded = ['getreg', 'regcode', 'register', 'signup']
+        if (!isRegUser(M.sender.id) && !noRegNeeded.some((cmd) => M.body.toLowerCase().includes(cmd))) {
+            return M.reply(`❌ You are not registered. Use *${global.config.prefix}getreg* first.`)
+        }
+           
         const parsedArgs = parseArgs(M.body)
         console.log(
             `${chalk.red('~EXEC')} ${chalk.cyan(`${global.config.prefix}${parsedArgs.cmd}`)} ${chalk.white('from')} ${chalk.green(M.sender.name)} ${chalk.white('in')} ${chalk.magenta(
