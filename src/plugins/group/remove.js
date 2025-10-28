@@ -10,7 +10,7 @@ plugin(
         category: 'group',
         description: {
             content: 'Remove mentioned or quoted users from the group.',
-            usage: '[mention user | quote user]',
+            usage: '<mention user | quote user>',
             example: '@917003213983'
         }
     },
