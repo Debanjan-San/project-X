@@ -1,4 +1,5 @@
 import { plugin } from '../../utils/plugin.js'
+import { randomString } from '../../functions/helpler.js'
 import { findUser, editUser } from '../../utils/database.js'
 
 plugin(
